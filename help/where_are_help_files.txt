@@ -1,0 +1,3 @@
+Help content deleted in dev environment to reduce storage reqmt, and allow faster searching of jfas code.
+Help content not in Harvest. Soon to be replaced.
+

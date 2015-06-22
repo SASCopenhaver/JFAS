@@ -1,0 +1,36 @@
+/* CSS Document */
+/* jfashome.less */
+@media only screen and (max-width: 800px) {
+  #HomeSurround,
+  .HeaderDiv {
+    width: 782px;
+    margin: 0;
+  }
+  .homeFilter {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+  #HomeSurround,
+  .HeaderDiv {
+    max-width: none !important;
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  #HomeSurround,
+  .HeaderDiv {
+    max-width: none !important;
+    width: 992px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #HomeSurround,
+  .HeaderDiv {
+    width: 1248px;
+  }
+}

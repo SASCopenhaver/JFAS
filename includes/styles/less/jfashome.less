@@ -1,0 +1,53 @@
+/* CSS Document */
+/* jfashome.less */
+
+//  4 RANGES
+// RANGE 1 LOW RANGE - 800 AND BELOW
+// SCRUNCH THIS DOWN FOR IE ON 800
+@media only screen and (max-width: 800px) {
+	// .PriNavDiv { background-color: black; width: 100%; }
+
+	// leaving 40px for vertical scroll bar in ie
+	//#HomeSurround, .HeaderDiv { width: 760px; }
+	// FORCE JFAS to fill the page
+	#HomeSurround, .HeaderDiv { width: 782px; margin:0;}
+	.homeFilter {
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  -ms-border-radius: 0;
+	  -o-border-radius: 0;
+	  border-radius: 0;
+	}
+}
+
+// RANGE 2 801px - 1024px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+	// .PriNavDiv { background-color: green; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 768px; }
+
+}
+
+// RANGE 3 1025px - 1280px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+	// .PriNavDiv { background-color: yellow; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 992px; }
+}
+
+
+// RANGE 4 - gt 1280 -  width of scrolling area is fixed. Body is centered in the window
+
+@media only screen and (min-width: 1280px) {
+	// .PriNavDiv { background-color: red; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { width: 1248px; }
+}
+// END of 4 RANGES

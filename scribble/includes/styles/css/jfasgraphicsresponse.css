@@ -1,0 +1,25 @@
+/* CSS Document */
+/* jfasgraphresponse.less */
+@media only screen and (max-width: 800px) {
+  #graphdiv {
+    width: 782px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+  #graphdiv {
+    max-width: none !important;
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  #graphdiv {
+    max-width: none !important;
+    width: 992px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #graphdiv {
+    width: 1248px;
+  }
+}

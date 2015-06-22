@@ -1,0 +1,33 @@
+/* jfasgraphicsresponse */
+
+//  4 RANGES
+// RANGE 1 LOW RANGE - 800 AND BELOW
+// SCRUNCH THIS DOWN FOR IE ON 800
+@media only screen and (max-width: 800px) {
+
+	#graphdiv { width: 782px; margin:0;}
+}
+
+// RANGE 2 801px - 1024px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+
+	#graphdiv  { max-width: none !important; width: 768px; }
+}
+
+// RANGE 3 1025px - 1280px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+	#graphdiv  { max-width: none !important; width: 992px; }
+}
+
+// RANGE 4 - gt 1280 -  width of scrolling area is fixed. Body is centered in the window
+
+@media only screen and (min-width: 1280px) {
+	#graphdiv  { width: 1248px; }
+}
+
+// END of 4 RANGES

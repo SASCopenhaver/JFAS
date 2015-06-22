@@ -1,0 +1,549 @@
+/* CSS Document */
+/* Form styles for Estimated Cost Profile - assign form1 class in overall body tag */
+body.form {
+	background-color: #FFFFFF;
+}
+.formContent {
+	padding: 10px;
+}
+/* Controls font attributes for all text in the content area that is NOT in a data table */
+.formContent p, .formContent div {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	color: #000000;
+}
+
+.form2Content {
+	padding: 10px;
+}
+/* Controls font attributes for all text in the content area that is NOT in a data table */
+.form2Content p, .form2Content div {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	color: #000000;
+}
+
+/* Class for header information displayed in the table under the Report title - assign class in overall table */
+.formHdrInfo {
+	margin-bottom: 10px;
+}
+.formHdrInfo td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	color: #000000;
+	padding: 2px;
+}
+
+/* Form1 header styles - these will cascade down if form is assigned in body tag */
+
+.form h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	text-align: center;
+}
+.form h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	color:#000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.form h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.form h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+/* Form1 data table styles - assign class to overall table and everything else will work.  All alignment of text in done in the cells themselves - per Mark's request */
+.form1DataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 742px;
+}
+.form1DataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: left;
+	padding: 6px 10px 6px 10px;
+}
+.form1DataTbl th div {
+	color: #d7e0e9;
+	font-weight: bold;
+	font-size: .95em;
+}
+.form1DataTbl th a, .form1DataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.form1DataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+.form1DataTbl td a, .form1DataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+/* Class for alternating row color - assign in tr tag */
+.formAltRow td {
+	background-color: #e7edf3;
+}
+/* Class for creating a horizontal rule in a table - assign in td tag with colspan across all columns in table to create 1 cell */
+.form1DataTbl td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #073053;
+	background-repeat: repeat-x;
+	height: 2px;
+	padding: 0;
+}
+/* Class for bottom footer table on Estimated Cost Profile - assign class in overall table */
+.form1ftr {
+	margin-top: 15px;
+	border: 1px solid #073053;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 742px;
+}
+.form1ftr th  {
+	background-color: #FFFFFF;
+	color: #073053;
+	font-weight: bold;
+	text-align: left;
+	padding: 6px 10px 6px 10px;
+}
+.form1ftr th a, .form1ftr th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.form1ftr td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+.form1ftr td a, .form1ftr td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+/* Form2 data table styles - assign class to overall table and everything else will work.  All alignment of text in done in the cells themselves - per Mark's request */
+.form2DataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 742px;
+}
+.form2DataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px 6px 4px 6px;
+	vertical-align: bottom;
+}
+.form2DataTbl th div {
+	color: #d7e0e9;
+	font-weight: bold;
+	font-size: 1em;
+}
+.form2DataTbl th a, .form2DataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.form2DataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+
+.form2DataTbl td a, .form2DataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+/* Class for alternating row color - assign in tr tag */
+.form2AltRow td {
+	background-color: #e7edf3;
+}
+/* Form2b data table styles - assign class to overall table and everything else will work.  All alignment of text in done in the cells themselves - per Mark's request */
+.form2bDataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 742px;
+}
+.form2bDataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: left;
+	padding: 2px 3px 4px 3px;
+	vertical-align: bottom;
+}
+.form2bDataTbl th div {
+	color: #d7e0e9;
+	font-weight: bold;
+	font-size: 1em;
+}
+.form2bDataTbl th a, .form2bDataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.form2bDataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+.form2bDataTbl td a, .form2bDataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+th.smTh {
+	font-size: .85em;
+}
+/* Class for alternating row color - assign in tr tag */
+.form2bAltRow td {
+	background-color: #e7edf3;
+}
+/* Class for Form2 footnote area - assign in div tag */
+.footnotes {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .65em;
+	padding: 6px;
+}
+/* Form3 data table styles - landscape format - assign class to overall table and everything else will work.  All alignment of text in done in the cells themselves - per Mark's request */
+.form3DataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 1000px;
+}
+.form3DataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: left;
+	padding: 6px 10px 6px 10px;
+}
+.form3DataTbl th div {
+	color: #d7e0e9;
+	font-weight: bold;
+	font-size: .95em;
+}
+.form3DataTbl th a, .form3DataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.form3DataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+.form3DataTbl td a, .form3DataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+/* Class for alternating row color - assign in tr tag */
+.form3AltRow td {
+	background-color: #e7edf3;
+}
+/* Class for creating a horizontal rule in a table - assign in td tag with colspan across all columns in table to create 1 cell */
+.form3DataTbl td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #073053;
+	background-repeat: repeat-x;
+	height: 2px;
+	padding: 0;
+}
+
+
+/* FormL data table styles - Makes font larger for printed reports
+assign class to overall table and everything else will work.  All alignment of text in done in the cells themselves - per Mark's request */
+.formLDataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	/*width: 742px;*/
+}
+.formLDataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: center;
+	padding: 6px 4px 6px 4px;
+}
+.formLDataTbl th div {
+	color: #d7e0e9;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.formLDataTbl th a, .form1DataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.formLDataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 4px 6px 4px;
+}
+.formLDataTbl td a, .form1DataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+/* Class for alternating row color - assign in tr tag */
+.formAltRow td {
+	background-color: #e7edf3;
+}
+/* Class for creating a horizontal rule in a table - assign in td tag with colspan across all columns in table to create 1 cell */
+.formLDataTbl td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #073053;
+	background-repeat: repeat-x;
+	height: 2px;
+	padding: 0;
+}
+
+
+/*
+The following classess for adhoc reports
+sets color,  font and border for the intro table that describes the form, place in table tag
+*/
+.FormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets color,  font and border for the intro table that describes the ad hoc form, place in table tag  */
+.adHocFormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+}
+/* sets new font size for header within form description table, place in h1 tag  */
+.formDescH1 {
+	font-size: 1.2em;
+	line-height: normal;
+	color: #003867;
+}
+.formDescH2 {
+	font-size: 1.2em;
+	line-height: .1em;
+	color: #003867;
+	font-weight: normal
+}
+/* sets color and font for form wizard step number, place in td tag  */
+.StepNumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #003867;
+}
+
+.formbutton{
+	 font-family : Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    color : #ffffff;
+    background-color : #C0C0C0; /*#9F9F5F;*/
+    padding : none;
+    border-bottom-color : #ffffff;
+    border-right-color : #ffffff;
+    border-left-color : #ffffff;
+    border-top-color : #ffffff;
+	}
+
+.ValidationTable {
+	background-color: #FFCCCC;
+	color: #000000;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets color,  font and border for Form tables, place in table tag  */
+.FormTable_line {
+	background-color: #e7edf3;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+}
+
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #333333;
+}
+
+.criteriaCellDisplay {
+	font-size: 1.0em;
+}
+
+/* sets font, size, and color for criteria summary at top of PDF report output  */
+.criteriaSummary {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.6em;
+	color: #5B5B5B;
+}
+
+/* sets color, padding, font and border for far column header for reports - place in th tag  */
+.report_hdr {
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	text-align:center;
+	color: #000000;
+	background-color: #cccccc;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+}
+
+/* sets font, size, and color for group by label in report data  */
+.group_label {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: left;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+}
+
+/* sets color, padding, font and border forthe middle columns of text in the app/grant listings table, place in td tag  */
+.report_datarow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:left;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_right {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_brdrright {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:center;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_totalrow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+h1 {
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size: .10em;
+	font-weight: bold;
+	color: #000000;
+	line-height: .7em;
+	padding-left: 15px;*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+/* for the AAPP List */
+.ColumnHeadings {
+	height:							20px;
+	width:							100%;
+	color:							white;
+	background:						#5e84a6;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						.9em;
+	font-weight: 					normal;
+}
+
+
+/*
+END classess for adhoc reports
+*/

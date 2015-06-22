@@ -1,0 +1,86 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Tue Jun 16 11:13:18 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:\Inetpub\wwwroot\cfdocs\grantee_prod\jfas_sergey\jfas\extensions\config\jfas_NCFMSFOOT.ctl
+Data File:      E:\Inetpub\wwwroot\cfdocs\grantee_prod\jfas_sergey\jfas\tempupload\jfas_NCFMSFOOT.dat
+  Bad File:     E:\Inetpub\wwwroot\cfdocs\grantee_prod\jfas_sergey\jfas\tempupload\jfas_NCFMSFOOT.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 20000
+Bind array:     2000 rows, maximum of 262144 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table JFAS.FOOTPRINT_NCFMS_LOAD, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+DOCUMENT_ID                         FIRST     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:DOCUMENT_ID)"
+AGENCY_CODE                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:AGENCY_CODE)"
+FUND_CODE                            NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:FUND_CODE)"
+BUDGET_YEAR                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:BUDGET_YEAR)"
+PROGRAM_CODE                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:PROGRAM_CODE)"
+ACTIVITY                             NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:ACTIVITY)"
+STRAT_GOAL                           NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:STRAT_GOAL)"
+FUNDING_ORG                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:FUNDING_ORG)"
+MANAGING_UNIT                        NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:MANAGING_UNIT)"
+COST_CENTER                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:COST_CENTER)"
+OBJECT_CLASS                         NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:OBJECT_CLASS)"
+VENDOR_NAME                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:VENDOR_NAME)"
+VENDOR_SITE_NAME                     NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:VENDOR_SITE_NAME)"
+VENDOR_DUNS                          NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "rtrim(:VENDOR_DUNS)"
+ORDERED_AMOUNT                       NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "replace(replace(replace(replace(:ORDERED_AMOUNT,'$',''),'(','-'),')',''),',','')"
+ADVANCE_AMOUNT                       NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "replace(replace(replace(replace(:ADVANCE_AMOUNT,'$',''),'(','-'),')',''),',','')"
+RECEIVED_AMOUNT                      NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "replace(replace(replace(replace(:RECEIVED_AMOUNT,'$',''),'(','-'),')',''),',','')"
+BILLED_AMOUNT                        NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "replace(replace(replace(replace(:BILLED_AMOUNT,'$',''),'(','-'),')',''),',','')"
+CANCELED_AMOUNT                      NEXT     *   ,  O(") CHARACTER            
+    SQL string for column : "replace(replace(replace(replace(:CANCELED_AMOUNT,'$',''),'(','-'),')',''),',','')"
+
+value used for ROWS parameter changed from 2000 to 53
+
+Table JFAS.FOOTPRINT_NCFMS_LOAD:
+  6235 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 259806 bytes(53 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:          6235
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue Jun 16 11:13:18 2015
+Run ended on Tue Jun 16 11:13:19 2015
+
+Elapsed time was:     00:00:01.74
+CPU time was:         00:00:00.22

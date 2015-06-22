@@ -26,4 +26,7 @@ $	git commit -m "this is the first commit"
 ===============================================================================
 ---Transfering to GitHub:
 $	git remote add origin https://github.com/SASCopenhaver/JFAS.git
-$	git push -u master
+
+---Make sure that all files are pulled first:
+$	git pull https://github.com/SASCopenhaver/JFAS.git
+$	git push

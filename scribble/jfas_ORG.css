@@ -1,0 +1,846 @@
+/* CSS Document */
+body {
+	background-color: #073053;
+	margin: 5px;
+}
+
+ /* Header styles - assigned within the td tags of the header table */
+.hdrTopL {
+	background-image: url(images/cnr_topL.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 5px;
+	height: 5px;
+}
+.hdrBg {
+	background-image: url(images/bg_hdr.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-color: #aec1d2;
+	height: 90px;
+}
+.hdrTopR {
+	background-image: url(images/cnr_topR.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	width: 5px;
+	height: 5px;
+}
+.hdrSideL {
+	background-color: #bbc9d9;
+	width: 5px;
+}
+.hdrSideR {
+	background-color: #aec1d2;
+	width: 5px;
+}
+/* Image padding styles for JFAS logo and header txt - assigned inside the img tag*/
+.logoJFAS {
+	padding-top: 5px;
+	padding-right: 8px;
+}
+.hdrTxtJFAS {
+	padding-top: 18px;
+	vertical-align: top;
+}
+/* Search styles - overall style assigned in div tag */
+.Search {
+	vertical-align: top;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: -79px;
+	
+	border:solid;
+	border-color:Red;
+	border-width:1px;
+	
+}
+.Search a, .Search a:visited {
+	color: #000000;
+	background-color: transparent;
+}	
+.Search input, .Search select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	vertical-align: middle;
+	text-align: left;
+}
+
+/* Primary Nav styles */
+/* Style for thin grey line between header and primary nav - assigned in its own div tag */
+.PriNavBdr {
+	background-image: url(images/clear.gif);
+	background-color: #cbcbcb;
+	height: 1px;
+}
+/* Primary Nav is set inside overall div tag with this container class assigned - div tag includes ul for the nav and must have at least 1 &nbsp; at the end for the ending image to display */
+/* Additionally, width on this div is 517px so that the curve at the end of the primary nav lines up with the swoopy background of the header */
+/*.ctrPriNav {
+	background-image: url(images/cnr_pri_nav.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #939393;
+	height: 28px;
+	width: 387px;
+	border-left: 1px solid #cbcbcb;
+	position: relative;
+}*/
+/* change above on 02/21/2008*/
+.ctrPriNav {
+	background-image: url(images/cnr_pri_nav.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #939393;
+	height: 28px;
+	width: 356px;
+	border-left: 1px solid #cbcbcb;
+	position: relative;
+}
+/* change above on 02/21/2008*/
+.ctrPriNavR {
+	background-image: url(images/cnr_pri_nav.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-color: #939393;
+	height: 28px;
+	width: 286px;
+	border-left: 1px solid #cbcbcb;
+	position: relative;
+}
+
+fieldset {
+	border:none;
+	margin-bottom: -1.5em;
+}
+
+legend {
+	margin-right: -0.4em;
+}
+
+/* Id tag used for Primary Nav ul tag */
+#PriNav {
+	margin:0;
+	padding:0;
+}
+/* All Primary Nav elements are in an li tag and are links - no other class assigning necessary */
+#PriNav li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	float: left;
+	white-space: nowrap;
+}
+#PriNav a {
+	text-decoration: none;
+	float:left;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	padding-left: 9px;
+	padding-right: 9px;
+	background-color: #939393;
+	border-right: 1px solid #cbcbcb;
+	line-height: 28px;
+}
+#PriNav a:hover {
+	background-color: #565656;
+}
+#PriNav #current a {
+	background-color: #565656;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* Container class for utility navigation - found on the right side of the primary nav - assigned in an overall div tag and contains classes for appearance and font attributes */
+/*
+.ctrUtilNav {
+	background-color: #FFFFFF;
+	border-top: 4px solid #939393;
+	margin-top: -28px;
+	margin-left: 386px;
+	text-align: right;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #565656;
+}*/
+/* change above on 02/21/2008*/
+.ctrUtilNav {
+	background-color: #FFFFFF;
+	border-top: 4px solid #939393;
+	margin-top: -28px;
+	margin-left: 256px;
+	text-align: right;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #565656;
+}
+.ctrUtilNav a {
+	color: #565656;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+/* Content Area Classes */
+.ctrContent {
+	background-color: #FFFFFF;
+	border-bottom: 3px solid #859db3;
+	padding: 10px;
+}
+/* Heading classes */
+/* H1 is always used for page header */
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+/* H2 used for sub headings like on the Admin page or in the AAPP sub-nav structure */
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+/* Futher Sub-heading used in AAPP sub-nav structure */
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+h1 a, h2 a, h3 a {
+	color: #073053; 
+}
+
+/* Class for required fields, alert messages, etc. - assign in p tag, div tag, td tag */
+p.required, div.required, td.required {
+	color: #8c1736;
+}
+
+/* Controls font attributes for all text in the content area that is NOT in a data table */
+.ctrContent p, .ctrContent div, .ctrSubContent td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	color: #000000;
+}
+/* Class for info located directly under AAPP # in the h1 tag - assign class in p tag */
+.contractInfo {
+	margin-top: -7px;
+}
+.btnRight {
+	margin-top: -30px;
+	float: right;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.btnLeft {
+	margin-top: -30px;
+	float: left;
+	margin-bottom: -7px;
+	text-align: left;
+}
+
+
+/* Classes for filters on Contracts page */
+/* Overall class assigned to table */
+.ctrfilter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	color: #000000;
+}
+/* Classes assigned to td tag */
+.filterL {
+	position: relative;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+.filterR {
+	text-align: right;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+/* Classes form fields in the Content Area */ /*MDS added text area*/
+.ctrContent input, .ctrContent select, .ctrContent textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: normal;
+	vertical-align: middle;
+}
+.ctrContent label {
+	font-weight: bold;
+	color: #565656;
+	background-color: transparent;
+}
+
+
+
+/* Classes for data displaying in a data table with Alternating Rows - assign overall class to table, no other style associations needed */
+.dataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+}
+.dataTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: left;
+	padding: 6px 10px 6px 10px;
+}
+.dataTbl th a, .dataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.dataTbl td {
+	background-color: #FFFFFF;
+	padding: 6px 10px 6px 10px;
+}
+.dataTbl td a, .dataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+/* Class for alternating row color - assign in tr tag */
+.AltRow td {
+	background-color: #e7edf3;
+}
+.HighlightRow td {
+	background-color: #FFFFCC;
+}
+/* Classes for data displaying in a data table with Alternating Columns - assign overall class to table, no other style associations needed */
+.dataTblCol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+}
+.dataTblCol th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: right;
+	padding: 6px 3px 6px 3px;
+}
+.dataTblCol th a, .dataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.dataTblCol td {
+	background-color: #FFFFFF;
+	padding: 3px 3px 6px 3px;
+	text-align: right;
+}
+.dataTblCol td a, .dataTblCol td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+.dataTblCol input {
+	text-align: right;
+	width: 68px;
+}
+
+
+/* Class for alternating row color - assign in tr tag */
+td.AltCol {
+	background-color: #e7edf3;
+}
+/* Class for creating a horizontal rule in a table - assign in td tag with colspan across all columns in table to create 1 cell */
+/* changed by MDS - made line thinner */
+td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #073053;
+	background-repeat: repeat-x;
+	height: 1px;
+	padding: 0;
+}
+/* MDS added */
+.inputReadonly {
+	border: 1px solid #999999;
+	background-color: transparent;
+}
+
+.inputEditable {
+	border: 2px inset #ffffff;
+	background-color: #ffffff;
+}
+/* RCR added */
+.btnDisabled {
+	color:#999999;
+	background-color:#cccccc;
+   	border:1px solid;
+}
+   
+
+
+/* Classes for page numbers for data tables */
+.ctrPageNum {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	color: #939393;
+	background-color: transparent;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.ctrPageNum a {
+	color: #939393;
+	background-color: transparent;
+}
+/* Classes for formatting table, no row or column colors - assign overall class to table, no other style associations needed */
+.contentTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+}
+.contentTbl td {
+	/*background-color: #FFFFFF;*/
+	padding: 6px 3px 6px 3px;
+}
+.contentTbl td a, .contentTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+/* MDS added */
+.contentTbl th  {
+	background-color: #5e84a6;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: center;
+	padding: 6px 3px 6px 3px;
+}
+
+/* MDS changed */
+.contentTbl input {
+	/*text-align: right;
+	width: 68px;*/
+}
+
+/* MDS added */
+.contentTbl label {
+	font-weight: normal;
+	color: #000000;
+	background-color: transparent;
+}
+
+
+/* Classes for formatting table, just labels and data, no form fields, columns */
+.readOnlyDataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+}
+.readOnlyDataTbl td {
+	padding: 3px 1px 3px 1px;
+}
+.readOnlyDataTbl td a, .readOnlyDataTbl td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+
+.readOnlyDataTbl th  {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+	border-bottom:solid 1px #999999;
+	padding: 3px 1px 1px 1px;
+}
+
+/* MDS ADDED - use for labels that should not appear on the page (eg: workload, contract input) */
+.hiddenLabel {
+	position:absolute;
+	left:0px
+	top:-100px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/* MDS added */
+.inputReadonly {
+	border: 1px solid #999999;
+	background-color: transparent;
+}
+
+/* MDS added */
+td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #999999;
+	background-repeat: repeat-x;
+	height: 1px;
+	padding: 0;
+}
+
+.errorList {
+	background-color: #FFCCCC;
+	border: 1px solid #668566;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #000000;
+	padding-left: 10px;
+}
+
+.errorField {
+	background-color: #FFCCCC;
+}
+
+.confirmList {
+	background-color: #CCFFCC;
+	border: 1px solid #668566;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #000000;
+	padding-left: 10px;
+}
+
+
+
+
+
+
+/* Class for aligning a group of buttons to the right - assign in div tag */
+.buttons {
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+/* Sub Navigation classes */
+/* The sub navigation is constructed inside a table - this first container class is assigned in the tr tag for the row */
+.ctrSubNav td {
+	position: relative;
+}
+/* Id tag used for Sub Nav ul tag */
+#SubNav {
+	margin:0;
+	padding:0;
+}
+/* All Sub Nav elements are in an li tag and are links - no other class assigning necessary */
+#SubNav li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	float: left;
+	white-space: nowrap;
+}
+#SubNav a {
+	text-decoration: none;
+	float: left;
+	color: #565656;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: #aec1d2;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	line-height: 28px;
+}
+#SubNav a:hover {
+	color: #d7e0e9;
+	background-color: #073053;
+	border-bottom: 1px solid #073053;
+}
+#SubNav #current2 a {
+	color: #d7e0e9;
+	background-color: #073053;
+	border-bottom: 1px solid #073053;
+}
+
+/* Third Level Navigation classes */ 
+/* The third level navigation is constructed inside the same table as the secondary nav - this first container class is assigned in the tr tag for the row */
+.ctrTerNav td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: bold;
+	color: #cbcbcb;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	background-color: #073053;
+	text-align: center;
+	line-height: 16px;
+}
+/* the following classes assign the colors to the links - no additional class needed except to show the current state - assign that in the a tag */
+.ctrTerNav a {
+	color: #CBCBCB;
+	background-color: #073053;
+}
+.ctrTerNav a:hover {
+	color: #FFFFFF;
+	background-color: #073053;
+}
+a.current {
+	color: #FFFFFF;
+	background-color: #073053;
+}
+
+/* Sub Navigation table classes */
+div.ctrSubContent {
+	border: 1px solid #073053;
+	border-top: none;
+	padding: 10px;
+	font-size: 1em;
+	position: relative;
+}
+div.ctrSubContent td, div.ctrSubContent th {
+	font-size: 1em;
+}
+
+/* Footer classes */
+.FtrBtmL {
+	background-image: url(images/cnr_btmL.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	height: 4px;
+	width: 100px;
+}
+.FtrBtmR {
+	background-image: url(images/cnr_btmR.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	height: 4px;
+	margin-top: -4px;
+	margin-left: 100px;
+}
+.ctrFooter {
+	padding: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #859db3;
+}
+.FooterL {
+	position: relative;
+	width: 390px;
+	padding-top: 4px;
+}
+.FooterR { 
+	text-align: right;
+	margin-top: -22px;
+	margin-left: 390px;
+}
+.FooterL a, .FooterL a:visited, .FooterR a, .FooterR a:visited {
+	color: #859db3;
+	font-weight: bold;
+}
+
+/*
+Styles for Tooltips
+*/
+#tt {
+	position:absolute;
+	display:block;
+}
+
+#ttcont {
+	display:block;
+	font: verdana;
+	padding:2px 12px 3px 7px;
+	margin-left:5px;
+	color:#000000;
+	border-style:solid;
+	border-width: 1px;
+	border-color:#FFCC99;
+	background:#FFFFCC;	
+}
+
+/* 
+The following classess for adhoc reports
+sets color,  font and border for the intro table that describes the form, place in table tag  
+*/
+.FormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets color,  font and border for the intro table that describes the ad hoc form, place in table tag  */
+.adHocFormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+}
+.formTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets new font size for header within form description table, place in h1 tag  */
+.formDescH1 {
+	font-size: 1.2em;
+	line-height: normal;
+	color: #003867;
+}
+.formDescH2 {
+	font-size: 1.2em;
+	line-height: .1em;
+	color: #003867;
+	font-weight: normal
+}
+/* sets color and font for form wizard step number, place in td tag  */
+.StepNumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #003867;
+}	
+
+.formbutton{
+	 font-family : Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    padding : none;
+    border-bottom-color : #ffffff;
+    border-right-color : #ffffff;
+    border-left-color : #ffffff;
+    border-top-color : #ffffff;
+	}
+	
+.ValidationTable {
+	background-color: #FFCCCC;
+	color: #000000;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+/* sets color,  font and border for Form tables, place in table tag  */
+.FormTable_line {
+	background-color: #e7edf3;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+}
+
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #333333;
+}
+
+.criteriaCellDisplay {
+	font-size: 1.0em;
+}
+
+/* sets color, padding, font and border for far column header for reports - place in th tag  */
+.report_hdr {
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	text-align:center;
+	color: #000000;
+	background-color: #cccccc;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+}
+
+/* sets color, padding, font and border forthe middle columns of text in the app/grant listings table, place in td tag  */
+.report_datarow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:left;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_right {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_brdrright {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:center;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_totalrow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+/* h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #003867;
+	line-height: .7em;
+	/*padding-left: 15px;*/
+}
+
+END classess for adhoc reports
+*/

@@ -1,0 +1,43 @@
+/* jfas_graphics.less */
+/* style for filters at left of home page */
+/* some tooltip styles are from jfas_graphics.less */
+.tooltip {
+  /* set the CSS for tooltip divs */
+  position: absolute;
+  /* reference for measurement */
+  text-align: left;
+  /* align the text to the center */
+  width: 60px;
+  /* set the width of the rectangle */
+  height: 28px;
+  /* set the height of the rectangle */
+  padding: 2px;
+  /* set a border around the rectangle */
+  font: 12px sans-serif;
+  /* set the font type for the tooltips */
+  border: 0px;
+  /* turn off the border (0px) */
+  border-radius: 8px;
+  /* set how rounded the edges of the rectangle is */
+  background: #d9d9d9;
+  /* set the color of the rectangle */
+  /* pointer-events: none;			'none' tells the mouse to ignore the rectangle.  This is commented out, so someone can click the link in the tooltip */
+}
+.foptip {
+  background: #fee9e8;
+}
+.ecptip {
+  background: #80b8e3;
+}
+.fmstip {
+  background: #e2efa0;
+}
+path.fopclass {
+  stroke: #de0f09;
+}
+path.ecpclass {
+  stroke: #123652;
+}
+path.fmsclass {
+  stroke: #6a7b15;
+}

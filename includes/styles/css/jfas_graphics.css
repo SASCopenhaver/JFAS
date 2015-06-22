@@ -1,0 +1,116 @@
+/* jfas_graphics */
+#graphdiv {
+  font: 10px sans-serif;
+  /* this width does not affect the display, but is dynamically changed when the window size changes. The width is used to calculate jfwidth in setGraphDimensions() */
+  width: 800px;
+}
+/****** COMMENT OUT FOR TEST
+//  4 RANGES
+// RANGE 1 LOW RANGE - 800 AND BELOW
+// SCRUNCH THIS DOWN FOR IE ON 800
+@media only screen and (max-width: 800px) {
+	// .PriNavDiv { background-color: black; width: 100%; }
+
+	// leaving 40px for vertical scroll bar in ie
+	//#HomeSurround, .HeaderDiv { width: 760px; }
+	// FORCE JFAS to fill the page
+	#HomeSurround, .HeaderDiv { width: 782px; margin:0;}
+}
+
+// RANGE 2 801px - 1024px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+	// .PriNavDiv { background-color: green; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 768px; }
+
+}
+
+// RANGE 3 1025px - 1280px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+	// .PriNavDiv { background-color: yellow; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 992px; }
+}
+
+
+// RANGE 4 - gt 1280 -  width of scrolling area is fixed. Body is centered in the window
+
+@media only screen and (min-width: 1280px) {
+	// .PriNavDiv { background-color: red; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { width: 1248px; }
+}
+// END of 4 RANGES
+
+END of comment out */
+/* some tooltip styles are from jfas_graphics.less */
+.tooltip {
+  /* set the CSS for tooltip divs */
+  position: absolute;
+  /* reference for measurement */
+  text-align: left;
+  /* align the text to the center */
+  width: 60px;
+  /* set the width of the rectangle */
+  height: 28px;
+  /* set the height of the rectangle */
+  padding: 2px;
+  /* set a border around the rectangle */
+  font: 12px sans-serif;
+  /* set the font type for the tooltips */
+  border: 0px;
+  /* turn off the border (0px) */
+  border-radius: 8px;
+  /* set how rounded the edges of the rectangle is */
+  background: #d9d9d9;
+  /* set the color of the rectangle */
+  /* pointer-events: none;			'none' tells the mouse to ignore the rectangle.  This is commented out, so someone can click the link in the tooltip */
+}
+.foptip {
+  background: #fee9e8;
+}
+.ecptip {
+  background: #80b8e3;
+}
+.fmstip {
+  background: #e2efa0;
+}
+path.fopclass {
+  stroke: #de0f09;
+}
+path.ecpclass {
+  stroke: #123652;
+}
+path.fmsclass {
+  stroke: #6a7b15;
+}
+.CheckBoxesDiv1 {
+  float: left;
+  padding: 0 0 0 0;
+}
+.chklabellabel {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.chklabel {
+  font-size: 1.3em;
+}
+.chklabelFOP {
+  color: #de0f09;
+  font-size: 1.3em;
+}
+.chklabelECP {
+  color: #123652;
+  font-size: 1.3em;
+}
+.chklabelFMS {
+  color: #6a7b15;
+  font-size: 1.3em;
+}

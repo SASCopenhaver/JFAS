@@ -1,0 +1,1713 @@
+/* CSS Document */
+/* jfas.less */
+
+/* style for filters at left of home page */
+@gray-darker:				lighten(#000, 13.5%); // #222
+@gray-dark:					lighten(#000, 20%);   // #333
+@gray:						lighten(#000, 33.5%); // #555
+@gray-light:				lighten(#000, 60%);   // #999
+@gray-mediumlight:			lighten(#000, 85%);   // #999
+@gray-lighter:				lighten(#000, 93.5%); //
+@gray-highlighter:			lighten(#000, 90%); //
+@gray-lightest:				lighten(#000, 97%); //
+@mediumGray:				#565656;
+
+
+@darkBlue:					#073053;
+@tealBlue:					#5e84a6;
+@tealBlue-lighter:			lighten(@tealBlue, 10%); // #eee
+
+@lightBlue:					#aec1d2;
+@columnHeadingColor:		#d7e0e9;
+
+/* * * * * HOME PAGE * * * * * */
+// THESE ARE THE BASIC DESIGN PARAMETERS FOR THE HOME PAGE at 1024.  Leaving room for i.e.
+@HomeSurroundWidth: 		990px;
+@homeFilterOutsideWidth:	195px;
+
+@ScrollingAreaMarginLeft:	195px;
+@lowerContainerWidth:		990px;
+
+/* FILTER */
+
+/* home filter is an overlay */
+/* position is based on navbar height excluding margin, determined by inspecting properties of the navbar */
+@FCHTop:					105px;
+@homeFilterTop:				0px;
+// setting this very short for ie8 on 800 x 600.  Will be overridden in more-modern situations.
+@homeFilterHeight:			400px;
+
+@homeFilterwidth:			(@homeFilterOutsideWidth - 18);
+
+@HomeNoFilterIconTabWidth:	35px;
+@homeFilterborderwidth:		3px;
+@homeFilterpadding:			5px 0px 5px 6px;
+@homeFiltermargin:			5px 0px 5px 0px;
+@homeFilterbackgroundcolor:	white;
+
+/* * * * * HEADER and Filter-FilerText-ColumnHeadings (FCH) * * * * */
+@hdrTopDivTop:				0px;
+@hdrBgHeight:				57px;
+@PriNavHeight:				25px;
+/* be sure jfasHeaderTitle height takes up enough room to have the overlay for Filtertext and ColumnHeadings */
+
+@ColumnHeadingsHeight:		20px;
+@divFilterTextHeight:		30px;
+@divHeaderTitleHeight:		30px;
+/* fudge - adjust so that the filter text comes all the way up toe the bottom of the Page Title */
+@headerHeight:				(@hdrBgHeight + @PriNavHeight + @divHeaderTitleHeight - 2);
+
+//@bannerRightofLogoWidth: 	538px;
+
+@bannerRightofLogoWidth: 	500px;
+
+@TopMessageTop:				(@hdrBgHeight + @PriNavHeight);
+
+@ScrollingAreatop:			(@headerHeight + @divFilterTextHeight + @ColumnHeadingsHeight);
+// this is when the filter tab is open
+@ScrollingAreaWidth:		(@lowerContainerWidth - @homeFilterOutsideWidth);
+
+/* leave room for overlays for filtertext and columnHeadings */
+
+@dataFontSize:				.85em;
+
+
+/* Detail Page. This is the with of the detailSurround div, which is centered */
+
+@detailSurroundWidth:			762px;
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.rounded-top-corners (@radius: 5px 5px 0 0) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.rounded-lower-left (@radius: 0 0 0 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.bodyHomeStyle {
+	min-width:					800px;
+	// this connects the FCH Filtertop stuff to the scrolling area
+	padding-top:				0;
+	padding-bottom: 			5px;
+	// do NOT have a margin, so that the home page can go all the way to the left, when the window gets smaller
+	//margin:						5px;
+	font-family:				Arial, Helvetica, sans-serif;
+	background-color: 			@darkBlue;
+
+}
+
+.bodyDetailStyle {
+	min-width: 					762px;
+	padding-top:				0;
+	margin:						0;
+	padding-bottom: 			30px;
+	background-color: 			@darkBlue;
+	// duplicates bootstrap that appears for .bodyHomeStyle
+	line-height:				1.428571429;
+}
+
+/* this div centers the home page */
+.HomeSurround {
+	// controls the width of the (centered) lower container in the home page
+	width:				@HomeSurroundWidth;
+	//background-color:	green;
+	margin:				0 auto;
+	max-width: 			none !important;
+}
+
+/* * * * * * Next section is to disable the responsiveness of the navbar * * * * * */
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+/* Non-responsive overrides
+ *
+ * Utilize the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* An "!important" declaration (the delimiter token "!" and keyword "important" follow the declaration) takes precedence over a normal declaration. Both author and user style sheets may contain "!important" declarations, and user "!important" rules override author "!important" rules. This CSS feature improves accessibility of documents by giving users with special requirements (large fonts, color combinations, etc.) control over presentation.
+
+Declaring a shorthand property (e.g., 'background') to be "!important" is equivalent to declaring all of its sub-properties to be "!important".  */
+/* Reset the container */
+
+// using container (1) within nav, and (2) below nav
+.container {
+	// margin:			0 auto;
+	max-width: 		none !important;
+	// border: green solid 10px;
+	// background-color: orange;
+}
+
+
+/* Demonstrate the grids */
+.col-xs-4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// NOTE:  <nav> is styled at the element level in home.cfm
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  // background-color: #fff;
+  background-color: @darkBlue;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* * * * * * * * * * * END OF OVERRIDE RESPONSIVE navbar * * * * * * * * * */
+
+
+.table100 {
+	width: 100%;
+	background-color: 	 @darkBlue;
+	// border: 1px red solid;
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: 0;
+	// border-spacing: 0 makes detail page go to top of viewport
+	border-spacing: 0;
+	//border: green solid 1px;
+}
+
+
+.btn_pri_nav {
+	height:				20px;
+	width:				100px;
+	margin-right:		0px;
+	// square the buttons, by overwritting the default from Bootstrap
+	.rounded-corners (0);
+	// get rid of bevel on primary nav buttons. Over-ride user-agent.
+	border: 			0px outset buttonface   !important;
+	border-right: 		1px solid black !important;
+	background: 		transparent;
+}
+.btn_pri_nav_gray {
+	background-color:	@gray-mediumlight;
+}
+
+/* * * * * * * * * * FilterandColumnHeadings * * * * * * * * * * * */
+#FilterandColumnHeadings	{
+	z-index:			20;
+	position:			fixed;
+
+	top:				@FCHTop;
+
+	width:				@HomeSurroundWidth;
+	//border:				orange 1px solid;
+}
+
+#idFilterText {
+	z-index:						20;
+	// although we don't position this element, we must declare relative, so that other elements can show over it
+	position:						fixed;
+	top: 							@FCHTop;
+	height:							@divFilterTextHeight;
+	width: 							(@HomeSurroundWidth - @homeFilterOutsideWidth) ;
+	margin-left:					(@homeFilterOutsideWidth);
+
+	font-family: 					Arial, Verdana, Helvetica, sans-serif;
+	font-size: 						.9em;
+	padding:						0;
+	background:						white;
+	a {
+		color:						@gray-mediumlight;
+		background-color:			white;
+	}
+	a:visited {
+		color:						@gray-mediumlight;
+		background-color:			white;
+	}
+	float:							left;
+	//border:	black solid 1px;
+}
+
+.filterTextImg {
+	// border: 0;
+	padding: 0 0 3px 3px;
+	width: 16px;
+	height: 16px;
+}
+
+
+.ColumnHeadings {
+	z-index:						20;
+	//top:							@divFilterTextHeight;
+	position:						fixed;
+	top:							(@FCHTop + @divFilterTextHeight);
+
+	width:							@HomeSurroundWidth;
+
+	height:							@ColumnHeadingsHeight;
+	width:							@lowerContainerWidth - @homeFilterOutsideWidth;
+	background-color:				white;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						1em;
+	float:							left;
+	clear:							left;
+	margin-left: 					@homeFilterOutsideWidth;
+	// border:							yellow solid 1px;
+}
+
+
+/************ No Filter Tab *****************/
+
+.homeNoFilter {
+
+	/* position is based on navbar height excluding margin, devermined by inspecting properties of the navbar */
+	position:					fixed;
+	top:						@FCHTop;
+	height:						@divFilterTextHeight;
+	width:						@HomeNoFilterIconTabWidth;
+	overflow-y:					none;
+
+	z-index:					20;
+
+	float:						left;
+	padding:					0;
+	background-color:			white;
+	// border:						1px solid gray;
+	// leave this visibile to work with ie8
+	visibility: 				visible;
+
+}
+
+.ImgOnFilterTab {
+	border: 0;
+	padding: 0;
+	width: 23px;
+	height: 20px;
+}
+
+.ImgOnPriNav{
+	border: 0;
+	padding: 0;
+	width: 30px;
+	height: 20px;
+}
+
+.noFilterBtn {
+	border: 0;
+	margin: 0 6px 0 2px;
+	width: 16px;
+	height: 16px;
+}
+
+/************ homeFilter tab *****************/
+/* this OVERLAYS the main table, NOT in the banner */
+// use nesting from less compiler
+
+.homeFilter {
+	/* position is based on navbar height excluding margin, devermined by inspecting properties of the navbar */
+	position:					absolute;
+	top:						@homeFilterTop;
+	height:						@homeFilterHeight;
+	width:						@homeFilterOutsideWidth;
+	overflow-x:					hidden;
+	overflow-y:					scroll;
+
+	z-index:					20;
+
+	float:						left;
+	margin:						0;
+	padding:					@homeFilterpadding;
+	background-color:			@homeFilterbackgroundcolor;
+	font-family:				Arial, Helvetica, sans-serif;
+	font-size:					.9em;
+	color:						black;
+	.rounded-lower-left;
+	visibility: 				visible;
+	// border:						green 1px solid;
+
+}
+
+.homeFilterGuts {
+	width:						@homeFilterwidth;
+	// border:						orange 1px solid;
+}
+
+
+#home_filterSearchWord{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	width: 110px;
+	/* vertical-align: middle; */
+	/* text-align: left; */
+}
+
+.home_filterDate{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	width: 80px;
+	margin: 4px 4px 1px 6px;
+	/* vertical-align: middle; */
+	/* text-align: left; */
+}
+
+.btnApplyFilter {
+	margin-left:				10px;
+}
+
+// use nesting from less compiler
+
+.filterRadioSetBanner {
+	background-color:			@tealBlue;
+	color:						white;
+	height:						22px;
+	width:						@homeFilterwidth;
+	font-weight:				normal;
+	font-size:					12px;
+	text-align:					left;
+	padding:					3px 0 3px 13px;
+	margin:						0 0 6px 0;
+}
+
+.filterRadioSetBanner:hover {
+	background-color:			@tealBlue-lighter;
+}
+
+
+input[type="checkbox"] {
+	margin: 0;
+}
+
+.filterRadioLabel {
+	font-weight:				normal;
+	line-height:				80%;
+	font-size:					11px;
+
+}
+
+.filterKeyword {
+	text-align:					right;
+	padding-right:				0px;
+	padding-bottom:				0px;
+	// border:						red 1px solid;
+}
+
+.filterSelector {
+	font-size:					.9em;
+}
+
+
+/*******   Header  ***********/
+
+
+/* style for fixing the header at the top of the page */
+.HeaderDiv {
+
+	z-index: 20;
+	position: fixed;
+	top:						@hdrTopDivTop;
+	height:						@headerHeight;
+	// must have a px value, since it is z-index 20, and not controlled by bodyHomeStyle
+	width:						@HomeSurroundWidth;
+	margin: 					0 auto;
+	background-color:			white;
+	//border:					red 1px solid;
+
+}
+
+/* Header styles - assigned within the td tags of the header table */
+
+/* class for tr td on left of hdrBg (little spacer) */
+.headerTopL {
+	background-image: 			url(images/cnr_topL.gif);
+	background-position: 		top left;
+	background-repeat: 			no-repeat;
+	width:						5px;
+	height:						5px;
+		// border:					orange 1px solid;
+
+}
+
+/* class for tr td on right of hdrBg (little spacer) */
+.headerTopR {
+	/* background-image: 			url(images/cnr_topR.gif); */
+	background-position:		top right;
+	background-repeat:			no-repeat;
+	width:						5px;
+	height:						5px;
+		// border:					yellow 1px solid;
+
+}
+
+.headerSideL {
+	background-color:			#bbc9d9;
+	width:						5px;
+		// border:					green 1px solid;
+
+}
+.headerSideR {
+	background-color:			@lightBlue;
+	width:						5px;
+		// border:					red 1px purple;
+
+}
+
+/* The banner is WITHIN HeaderDiv.  It contains logo, quick search controls */
+.banner {
+	//background:					url(images/bg_hdr.gif);
+	background-position: 		top left;
+	background-repeat: 			no-repeat;
+	background-color: 			@lightBlue;
+	height: 					@hdrBgHeight;
+	width:						100%;
+	float:						top;
+	//.rounded-top-corners;
+	//border-bottom: solid white 1px;
+}
+/* for displaying line of links in top banner */
+
+.bannerLogo {
+	width: 							200px;
+	float: 							left;
+	padding: 						8px 0 3px 10px;
+		// border:					red 1px purple;
+}
+
+/* Image padding styles for JFAS logo and header txt - assigned inside the img tag*/
+.logoJFAS{
+	padding: 					0px 0px 0px 0px;
+		// border:					solid 1px purple;
+}
+
+.headerTxtJFAS {
+	padding:					0px 8px 0px 3px;
+}
+
+#bannerRightofLogo {
+	float: 							right;
+	width: 							@bannerRightofLogoWidth;
+	text-align:						right;
+	padding:						5px 5px 5px 0;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						@dataFontSize;
+	color:							@mediumGray;
+		// border: 1px solid red;
+}
+
+// this is the same as .bannerRightofLogo, but for the Detail Pages
+#bannerRightofLogoDetail {
+	float: 							right;
+	width: 							@bannerRightofLogoWidth;
+	text-align:						right;
+	padding:						5px 5px 5px 0;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						.78em;
+	color:							@mediumGray;
+		// border: 1px solid green;
+}
+
+.bannerLogoutNav {
+	// from bootstrap.css
+	box-sizing:						border-box;
+	//margin-left:					300px;
+		// border:					red 1px purple;
+	a {
+		color:							white;
+		font-family:					Arial, Helvetica, sans-serif;
+		//font-size:						.9em;
+		font-weight:					normal;
+		text-decoration: 				none;
+		background:						transparent;
+		&:hover {
+			//color:							@mediumGray;
+			color:						black;
+			background-color:			white;
+		}
+	}
+}
+
+/* Style for Quick Search - affects both Home and Detail pages */
+.divQuickSearch {
+	/* required to push quick search to right of primary navigation */
+	float: 					right;
+	width:					(@bannerRightofLogoWidth);
+
+	vertical-align:			top;
+	text-align:				right;
+	padding:				2px 5px 2px 0;
+	font-family:			Arial, Helvetica, sans-serif;
+	//font-size:				1em;
+	font-weight:			bold;
+	color:					#000000;
+	background-color:		transparent;
+}
+
+// space is DEPENDENT SELECTOR.  First item is <a> within class=divQuickSearch
+.divQuickSearch a, .divSearch a:visited {
+	color: 					#000000;
+	background-color: 		transparent
+}
+
+.divQuickSearch input, .divSearch select {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+	/* vertical-align: middle; */
+	/* text-align: left; */
+}
+
+
+/************ Primary Nav styles *****************/
+.PriNavDiv {
+	height:						@PriNavHeight;
+	margin:						0;
+	padding:					0;
+	background-color:			@gray-lighter;
+	width:						100%;
+	//border:						yellow 1px solid;
+}
+
+.PriNavDivLeft {
+	float:						left;
+	height:						100%;
+	margin:						0;
+	padding:					0;
+	width:						82%;
+	// border:						green 1px solid;
+}
+
+.PriNavDivRight {
+	float:						right;
+	height:						100%;
+	margin:						0;
+	// leave room for vertical scroll bar in ie at 800px
+	padding:					0 18px 0 0;
+	width:						12%;
+	text-align:					right;
+	// border:						blue 1px solid;
+}
+
+
+/* Id tag used for PriNav ul tag */
+#PriNav {
+	margin:						0;
+	padding:					0;
+	float:						left;
+	text-align:					left;
+	ul {
+		list-style-type: none;
+	}
+	li {
+		list-style-type:			none;
+		display:					inline;
+		margin:						0;
+		padding:					0;
+		float:						left;
+		white-space:				nowrap;
+	}
+	a {
+		text-decoration:			none;
+		float:						left;
+		color:						white;
+		font-family:				Arial, Helvetica, sans-serif;
+		font-size:					.8em;
+		font-weight:				bold;
+		padding-left:				0px;
+		padding-right:				0px;
+		background-color:			#939393;
+		border-right:				1px solid #cbcbcb;
+		line-height:				28px;
+		&:hover {
+			background-color:			@mediumGray;
+		}
+	}
+	#current a {
+		background-color:			@mediumGray;
+		color:						#FFFFFF;
+		text-decoration:			none;
+	}
+}
+
+// this is for the detail pages
+.PriNavBackgroundColor {
+	background-color: @gray-highlighter;
+}
+
+// copied from bootstrap, so detail page can have carat
+btn-default .caret {
+	border-top-color: #333333;
+}
+
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 2px;
+vertical-align: middle;
+border-top: 4px solid #000000;
+border-right: 4px solid transparent;
+border-bottom: 0 dotted;
+border-left: 4px solid transparent;
+}
+
+/************ Primary Navigation Sub Menu (e.g. newAAPP dropdown Form) *****************/
+/* this OVERLAYS the title text, filter text, column headings, and main table, NOT in the banner */
+// use nesting from less compiler
+
+.TopMessage {
+
+	z-index:					20;
+
+	/* position is based on navbar height excluding margin, determined by inspecting properties of the navbar */
+	position:					fixed;
+	top:						@TopMessageTop;
+
+	overflow-y:					none;
+
+	float:						left;
+	font-family:				Arial, Helvetica, sans-serif;
+	// next two properties emulate bootstrap
+	font-size: 					12px;
+	line-height: 				1.4;
+
+	background-color: 			@gray-lighter;
+	padding:					0px 5px 5px 5px;
+	margin: 					0;
+	// border: 					1px solid #333333;
+
+	visibility: 				visible;
+
+	// use nesting from less compiler
+
+	// border:					red 1px solid;
+	a {
+		/* override bootstrap, for first line by carat to close form */
+		color:						#073053;
+		text-decoration: 			none;
+		font-weight:				normal;
+		background-color: 			@gray-lighter;
+		&:hover {
+			background-color: 			@gray-mediumlight;
+		}
+	}
+	ul {
+		list-style-type: none;
+		padding: 5px 5px 5px 5px;
+	}
+	li {
+		text-align: left;
+		margin: 0;
+	}
+}
+
+.inline-caret {
+	display:					inline;
+}
+
+.green {
+	background-color: green;
+}
+
+.red {
+	background-color: red;
+}
+
+
+// position of the dropdowns under the primary navigation
+// margin-left IS OVERRITTEN by js in OpenOneSubmenu()
+.MyAAPPs {
+	margin-left:				300px;
+	height:						10px;
+	width:						110px;
+}
+
+.MyFilters {
+	margin-left:				400px;
+	height:						10px;
+	width:						400px;
+}
+
+.MyFiltersTable {
+	width: 100%;
+	margin: 0 0 0 10px;
+}
+
+
+.NameOneFilter {
+	margin-left:				400px;
+	padding:					10px 0 0 5px;
+	height:						125px;
+	width:						370px;
+
+	font-family:				Arial, Helvetica, sans-serif;
+	font-size:					12px;
+	border: 					1px solid #333333;
+
+	input {
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-size: 12px;
+	  color: #333333;
+	}
+}
+
+.HomePageOptions {
+	// fudge to be sure everything fits
+	margin-left: 				(@HomeSurroundWidth - 200 - 10);
+	z-index:					20;
+	height:						62px;
+	width: 						200px;
+}
+
+// this is for the dropdown from the header of the detail page
+.AAPPPageOptions {
+	// margin-left gets overwritten by JS
+	margin-left:				(@detailSurroundWidth - 150);
+	z-index:					20;
+	// use absolute, not fixed, to let scroll off the page
+	position: 					absolute;
+	height:						28px;
+	width:						130px;
+}
+
+
+
+.NameOneFilterDuplicate {
+	margin-left:				407px;
+	height:						110px;
+	width:						400px;
+}
+
+#btnNewAAPP .NewAAPP {
+	margin-left:				500px;
+	height:						43px;
+	width:						160px;
+	border-right: 				0  !important;
+
+}
+
+#idNameOneFilterDuplicate {
+	visibility:hidden;
+}
+
+#jfasHeaderTitle {
+	z-index:			20;
+	height:				@divHeaderTitleHeight;
+	width:				100%;
+	padding:			3px 0 3px 6px;
+	font-family: 		Arial, Helvetica, sans-serif;
+	font-size:			1.1em;
+	font-weight:		bold;
+	// border:				green 1px solid;
+}
+
+
+.clear {
+	clear: both;
+}
+
+
+fieldset {
+	border:						none;
+	margin-bottom:				-1.5em;
+}
+
+/* * * * * * * * * * * * * style for scolling area * * * * * * * * * * * * * */
+.lowerContainer {
+	background-color:			@darkBlue;
+	width: 						@lowerContainerWidth;
+	// THIS IS 0.  Adjustment of margin is in the scrolling area
+	margin-left:				0;
+}
+
+// This is offset, within the .lowerContainer, to allow for the Filter Tab
+.ScrollingArea {
+	margin-top:						@ScrollingAreatop;
+	margin-left:					@ScrollingAreaMarginLeft;
+	width:							@ScrollingAreaWidth;
+
+	// background-color: orange;
+
+	overflow-y:						none;
+	// border:							blue solid 2px;
+}
+
+
+/* THIS IS ONLY FOR THE AAPP LISTING ON THE HOME PAGE*/
+// modelled on table100
+// use nesting from less compiler
+.AAPPHomeTbl {
+	font-family:		Arial, Helvetica, sans-serif;
+	font-size:			@dataFontSize;
+	width:				100%;
+	border:				0;
+	cellspacing:		0;
+	cellpadding:		0;
+	box-sizing: 		0;
+
+
+	th  {
+		background-color: @tealBlue;
+		color: @columnHeadingColor;
+		font-weight: normal;
+		text-align: left;
+		padding: 0px;
+
+		a {
+			color: #d7e0e9;
+			background-color: transparent;
+		}
+		a:visited {
+			color: #d7e0e9;
+			background-color: transparent;
+		}
+	}
+
+	td {
+		background-color: #FFFFFF;
+		text-align: left;
+		padding: 2px;
+		a {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+		}
+		a:visited {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+		}
+	}
+	td.DataTitle {
+		font-family: 		Arial, Verdana, Helvetica, sans-serif;
+		font-size: 			.8em;
+		padding:			10px 10px 10px 30px;
+		background:			@gray-mediumlight;
+		a {
+			color:				white;
+			background-color:	@gray-mediumlight;
+		}
+		a:visited {
+			color:				white;
+			background-color:	@gray-mediumlight;
+		}
+	}
+}
+
+.AAPPSpacer {
+		background-color: white;
+		padding: 60px 0 60px 0;
+		text-align:center;
+}
+
+/********** Content Area Classes *************/
+/* these are for DETAIL pages, NOT Home page */
+
+/* this div centers the detail page page */
+.detailSurround {
+	// controls the width of the (centered) detail page
+	width:				@detailSurroundWidth;
+	// background-color:	green;
+	margin:				0 auto;
+	max-width: 			none !important;
+		// border:	yellow solid 1px;
+}
+
+/* Controls font attributes for all text in the content area that is NOT in a data table */
+.ctrContent {
+	background-color:			white;
+	border-bottom:				3px solid #859db3;
+	// this padding puts white padding to left and right of all content under all the navigation
+	// However, it extends all the part below the primary navigation to the right
+	padding:					2px 10px 2px 10px;
+	// THIS IS HARD-CODED FOR WITH OF 762px, since calc does not work in ie8, according to caniuse.com
+	//width:						100%;
+	width:						742px;
+	p, div {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: .75em;
+		color: #000000;
+		padding:					2px 10px 2px 0px;
+	}
+	input, select {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: .8em;
+		font-weight: normal;
+		vertical-align: middle;
+	}
+	textarea {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: .8em; // making this too big will break the Notes tab in the AAPP Detail area
+		font-weight: normal;
+		vertical-align: middle;
+	}
+	label {
+		font-size: 1em;
+		font-weight: bold;
+		color: @mediumGray;
+		background-color: transparent;
+	}
+}
+
+legend {
+	margin-right:				-0.4em;
+	font-family:				Arial, Helvetica, sans-serif;
+	color:						black;
+	font-size:					1em;
+}
+
+
+
+/* Heading classes */
+/* H1 is always used for page header */
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+/* H2 used for sub headings like on the Admin page or in the AAPP sub-nav structure */
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+/* Futher Sub-heading used in AAPP sub-nav structure */
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	color: #000000;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+h1 a, h2 a, h3 a {
+	color: #073053;
+}
+
+/* Class for required fields, alert messages, etc. - assign in p tag, div tag, td tag */
+p.required, div.required, td.required {
+	color: #8c1736;
+}
+
+
+/* Class for info located directly under AAPP # in the h1 tag - assign class in p tag */
+.contractInfo {
+	margin-top: -7px;
+}
+.btnRight {
+	margin-top: -30px;
+	float: right;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.btnLeft {
+	margin-top: -30px;
+	float: left;
+	margin-bottom: -7px;
+	text-align: left;
+}
+
+
+/* Classes for data displaying in a data table with Alternating Rows - assign overall class to table, no other style associations needed */
+/* THIS IS FOR TABLES ON DETAIL PAGES */
+// use nesting from less compiler
+.dataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	width: 100%;
+	border: 0;
+	cellspacing: 0;
+	cellpadding: 0;
+
+	th  {
+		font-size: .90em;
+		background-color: @tealBlue;
+		color: @columnHeadingColor;
+		font-weight: bold;
+		text-align: left;
+		padding: 2px;
+		a {
+			color: #d7e0e9;
+			background-color: transparent;
+		}
+		a:visited {
+			color: #d7e0e9;
+			background-color: transparent;
+		}
+	}
+
+	td {
+		background-color: #FFFFFF;
+		padding: 4px;
+		// following line was not in original
+		// text-align: left;
+		a {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+		}
+		a:visited {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+		}
+	}
+	td.DataTitle {
+		font-family: 		Arial, Verdana, Helvetica, sans-serif;
+		font-size: 			.8em;
+		padding:			10px 10px 10px 30px;
+		background:			@gray-mediumlight;
+		a {
+			color:				white;
+			background-color:	@gray-mediumlight;
+		}
+		a:visited {
+			color:				white;
+			background-color:	@gray-mediumlight;
+		}
+	}
+}
+
+
+/* Class for alternating row color - assign in tr tag */
+.AltRow td {
+	background-color: #e7edf3;
+}
+
+.HighlightRow td {
+	background-color: #FFFFCC;
+}
+
+/* Classes for data displaying in a data table with Alternating Columns - assign overall class to table, no other style associations needed */
+.dataTblCol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: @dataFontSize;
+}
+.dataTblCol th  {
+	background-color: @tealBlue;
+	color: #d7e0e9;
+	font-weight: bold;
+	text-align: right;
+	padding: 6px 3px 6px 3px;
+}
+.dataTblCol th a, .dataTbl th a:visited {
+	color: #d7e0e9;
+	background-color: transparent;
+}
+.dataTblCol td {
+	background-color: #FFFFFF;
+	padding: 3px 3px 6px 3px;
+	text-align: right;
+}
+.dataTblCol td a, .dataTblCol td a:visited {
+	color: #073053;
+	font-weight: bold;
+	background-color: transparent;
+}
+.dataTblCol input {
+	text-align: right;
+	width: 68px;
+}
+
+
+/* Class for alternating row color - assign in tr tag */
+td.AltCol {
+	background-color: #e7edf3;
+}
+/* Class for creating a horizontal rule in a table - assign in td tag with colspan across all columns in table to create 1 cell */
+/* changed by MDS - made line thinner */
+td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #073053;
+	background-repeat: repeat-x;
+	height: 1px;
+	padding: 0;
+}
+/* MDS added */
+.inputReadonly {
+	border: 1px solid #999999;
+	background-color: transparent;
+	color: lighten(#000, 30%);;
+}
+
+.inputEditable {
+	border: 2px inset #ffffff;
+	background-color: #ffffff;
+}
+/* RCR added */
+.btnDisabled {
+	color:#999999;
+	background-color:@gray-lightest;
+   	border:1px solid;
+}
+
+/* Classes for page numbers for data tables */
+.ctrPageNum {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	color: #939393;
+	background-color: transparent;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.ctrPageNum a {
+	color: #939393;
+	background-color: transparent;
+}
+/* Classes for formatting table, no row or column colors - assign overall class to table, no other style associations needed */
+.contentTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	th  {
+		background-color: @tealBlue;
+		color: #d7e0e9;
+		font-weight: bold;
+		text-align: center;
+		padding: 6px 3px 6px 3px;
+	}
+	td {
+		/*background-color: #FFFFFF;*/
+		padding: 6px 3px 6px 3px;
+		a {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+			&:visited {
+				color: #073053;
+				font-weight: bold;
+				background-color: transparent;
+			}
+		}
+	}
+	input {
+		/*text-align: right;
+		width: 68px;*/
+	}
+	label {
+		font-weight: normal;
+		color: #000000;
+		background-color: transparent;
+	}
+}
+
+/* Classes for formatting table, just labels and data, no form fields, columns */
+.readOnlyDataTbl {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: @dataFontSize;
+	// this is th ANYWHERE within class=readOnlyDataTbl
+	th  {
+		font-weight: bold;
+		text-align: center;
+		vertical-align: bottom;
+		border-bottom:solid 1px #999999;
+		padding: 3px 1px 1px 1px;
+	}
+
+	td {
+		padding: 1px 1px 1px 1px;
+		a {
+			color: #073053;
+			font-weight: bold;
+			background-color: transparent;
+			&:visited {
+				color: #073053;
+				font-weight: bold;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+
+/* MDS ADDED - use for labels that should not appear on the page (eg: workload, contract input) */
+.hiddenLabel {
+	position:absolute;
+	left:0px;
+	top:-100px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/* MDS added */
+.inputReadonly {
+	border: 1px solid #999999;
+	background-color: transparent;
+}
+
+/* MDS added */
+td.hrule {
+	background-image: url(images/clear.gif);
+	background-color: #999999;
+	background-repeat: repeat-x;
+	height: 1px;
+	padding: 0;
+}
+
+.errorList {
+	background-color: #FFCCCC;
+	border: 1px solid #668566;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #000000;
+	padding-left: 10px;
+}
+
+.errorField {
+	background-color: #FFCCCC;
+}
+
+.confirmList {
+	background-color: #CCFFCC;
+	border: 1px solid #668566;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	color: #000000;
+	padding-left: 10px;
+}
+
+/* Class for aligning a group of buttons to the right - assign in div tag */
+.buttons {
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+/* Sub Navigation classes */
+/* The sub navigation is constructed inside a table - this first class is assigned in the tr tag for the row */
+.ctrSubNav td {
+	position: relative;
+}
+/* Id tag used for Sub Nav ul tag */
+#SubNav {
+	margin:0;
+	padding:0;
+}
+/* All Sub Nav elements are in an li tag and are links - no other class assigning necessary */
+#SubNav li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	float: left;
+	white-space: nowrap;
+}
+#SubNav a {
+	text-decoration: none;
+	float: left;
+	color: @mediumGray;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	font-weight: bold;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: @lightBlue;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	line-height: 28px;
+}
+#SubNav a:hover {
+	color: #d7e0e9;
+	background-color: #073053;
+	border-bottom: 1px solid #073053;
+}
+#SubNav #current2 a {
+	color: #d7e0e9;
+	background-color: #073053;
+	border-bottom: 1px solid #073053;
+}
+
+/* Third Level Navigation classes */
+/* The third level navigation is constructed inside the same table as the secondary nav - this first class is assigned in the tr tag for the row */
+.ctrTerNav td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: bold;
+	color: #cbcbcb;
+	padding: 6px 0 6px 50px;
+	background-color: #073053;
+	text-align: left;
+	line-height: 16px;
+}
+/* the following classes assign the colors to the links - no additional class needed except to show the current state - assign that in the a tag */
+.ctrTerNav a {
+	color: #CBCBCB;
+	background-color: #073053;
+	text-decoration: none;
+}
+.ctrTerNav a:hover {
+	color: #FFFFFF;
+	background-color: #073053;
+}
+a.current {
+	color: #FFFFFF;
+	background-color: #073053;
+}
+
+/* Sub Navigation and Detail table classes */
+div.ctrSubContent {
+	border: 1px solid #073053;
+	border-top: none;
+	padding: 10px;
+	font-size: .95em;
+	position: relative;  // relative to itself! Positions like top, left, bottom, or right are relative to where it would normally be. Can use z-index. Limits the scope of absolutely-positioned child elements
+	td {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.1em;
+		color: #000000;
+	}
+	th {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.05em;
+		color: black;
+
+	}
+}
+
+/* Footer classes */
+/* footer is in the scrolling area, but not in AAPPHomeTbl */
+.homeFooter {
+	float: left;
+	height:							50px;
+	width:							@ScrollingAreaWidth - 4;
+	margin-left:					0;
+	padding:						8px;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						.7em;
+	color:							#859db3;
+	background:						@darkBlue;
+	// border: black solid 1px;
+}
+
+#idFooter {
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						.7em;
+	margin-left:					0;
+	padding:						8px;
+	font-family:					Arial, Helvetica, sans-serif;
+	font-size:						.7em;
+	color:							#859db3;
+	background:						@darkBlue;
+}
+
+.FooterL {
+	width:							370px;
+	padding-top:					4px;
+	float:							left;
+	// border:							red solid 1px;
+}
+
+.FooterR {
+	text-align:						right;
+	margin-left:					370px;
+	// border:							green solid 1px;
+}
+
+.FooterL a, .FooterL a:visited, .FooterR a, .FooterR a:visited {
+	color:							#859db3;
+	font-weight:					bold;
+}
+
+.FtrBtmL {
+	background-image:				url(images/cnr_btmL.gif);
+	background-position:			bottom left;
+	background-repeat:				no-repeat;
+	background-color:				#FFFFFF;
+	height:							4px;
+	width:							100px;
+}
+.FtrBtmR {
+	background-image:				url(images/cnr_btmR.gif);
+	background-position:			bottom right;
+	background-repeat:				no-repeat;
+	background-color:				#FFFFFF;
+	height:							4px;
+	margin-top:						-4px;
+	margin-left:					100px;
+}
+
+/*
+Styles for Tooltips
+*/
+#tt {
+	position:absolute;
+	display:block;
+}
+
+#ttcont {
+	display:block;
+	font: verdana;
+	padding:2px 12px 3px 7px;
+	margin-left:5px;
+	color:#000000;
+	border-style:solid;
+	border-width: 1px;
+	border-color:#FFCC99;
+	background:#FFFFCC;
+}
+
+/*
+The following classess for adhoc reports
+sets color,  font and border for the intro table that describes the form, place in table tag
+*/
+.FormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets color,  font and border for the intro table that describes the ad hoc form, place in table tag  */
+.adHocFormDesc {
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+}
+.formTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets new font size for header within form description table, place in h1 tag  */
+.formDescH1 {
+	font-size: 1.2em;
+	line-height: normal;
+	color: #003867;
+}
+.formDescH2 {
+	font-size: 1.2em;
+	line-height: .1em;
+	color: #003867;
+	font-weight: normal
+}
+/* sets color and font for form wizard step number, place in td tag  */
+.StepNumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #003867;
+}
+
+.formbutton{
+	 font-family : Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    padding : none;
+    border-bottom-color : #ffffff;
+    border-right-color : #ffffff;
+    border-left-color : #ffffff;
+    border-top-color : #ffffff;
+	}
+
+.ValidationTable {
+	background-color: #FFCCCC;
+	color: #000000;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	padding-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* sets color,  font and border for Form tables, place in table tag  */
+.FormTable_line {
+	background-color: #e7edf3;
+	border: 1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #666666;
+}
+
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	color: #333333;
+}
+
+.criteriaCellDisplay {
+	font-size: 1.0em;
+}
+
+/* sets color, padding, font and border for far column header for reports - place in th tag  */
+.report_hdr {
+	padding-top: 2px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	text-align:center;
+	color: #000000;
+	background-color: #cccccc;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+}
+
+/* sets color, padding, font and border forthe middle columns of text in the app/grant listings table, place in td tag  */
+.report_datarow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:left;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_right {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_datarow_brdrright {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	text-align:center;
+	color: #5B5B5B;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #cccccc;
+	padding-right: 3px;
+}
+
+.report_totalrow {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align:right;
+	color: #5B5B5B;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding-right: 3px;
+}

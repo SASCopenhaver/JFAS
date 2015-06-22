@@ -1,0 +1,154 @@
+/* jfas_graphics */
+
+@gray-darker:				lighten(#000, 13.5%); // #222
+@gray-dark:					lighten(#000, 20%);   // #333
+@gray:						lighten(#000, 33.5%); // #555
+@gray-light:				lighten(#000, 60%);   // #999
+@gray-mediumlight:			lighten(#000, 85%);   // #999
+@gray-lighter:				lighten(#000, 93.5%); //
+@gray-highlighter:			lighten(#000, 90%); //
+@gray-lightest:				lighten(#000, 97%); //
+@mediumGray:				#565656;
+
+
+@darkBlue:					#073053;
+@tealBlue:					#5e84a6;
+@tealBlue-lighter:			lighten(@tealBlue, 10%); // #eee
+
+@lightBlue:					#aec1d2;
+@columnHeadingColor:		#d7e0e9;
+
+@foplinecolor: #DE0F09;
+@foptipcolor: lighten(@foplinecolor, 50%);
+
+@ecplinecolor: #123652;
+@ecptipcolor: lighten(@ecplinecolor, 50%);
+
+@fmslinecolor: #6A7B15;
+@fmstipcolor: lighten(@fmslinecolor, 50%);
+
+@checkboxfontsize: 1.3em;
+
+#graphdiv {
+  font: 10px sans-serif;
+  /* this width does not affect the display, but is dynamically changed when the window size changes. The width is used to calculate jfwidth in setGraphDimensions() */
+  width: 800px;
+}
+
+
+/****** COMMENT OUT FOR TEST
+//  4 RANGES
+// RANGE 1 LOW RANGE - 800 AND BELOW
+// SCRUNCH THIS DOWN FOR IE ON 800
+@media only screen and (max-width: 800px) {
+	// .PriNavDiv { background-color: black; width: 100%; }
+
+	// leaving 40px for vertical scroll bar in ie
+	//#HomeSurround, .HeaderDiv { width: 760px; }
+	// FORCE JFAS to fill the page
+	#HomeSurround, .HeaderDiv { width: 782px; margin:0;}
+}
+
+// RANGE 2 801px - 1024px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+	// .PriNavDiv { background-color: green; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 768px; }
+
+}
+
+// RANGE 3 1025px - 1280px @ 16px!
+// medium range, width of scrolling area varies
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+	// .PriNavDiv { background-color: yellow; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { max-width: none !important; width: 992px; }
+}
+
+
+// RANGE 4 - gt 1280 -  width of scrolling area is fixed. Body is centered in the window
+
+@media only screen and (min-width: 1280px) {
+	// .PriNavDiv { background-color: red; width: 100%; }
+
+	// leaving 32px for vertical scroll bar in ie.  This presents an equivalent  dark blue body on the left, because of centering
+	#HomeSurround, .HeaderDiv { width: 1248px; }
+}
+// END of 4 RANGES
+
+END of comment out */
+
+
+/* some tooltip styles are from jfas_graphics.less */
+.tooltip {				/* set the CSS for tooltip divs */
+  position: absolute;			/* reference for measurement */
+  text-align: left;				/* align the text to the center */
+  width: 60px;					/* set the width of the rectangle */
+  height: 28px;					/* set the height of the rectangle */
+  padding: 2px;					/* set a border around the rectangle */
+  font: 12px sans-serif;		/* set the font type for the tooltips */
+  border: 0px;					/* turn off the border (0px) */
+  border-radius: 8px;			/* set how rounded the edges of the rectangle is */
+  background: @gray-mediumlight;		/* set the color of the rectangle */
+
+
+  /* pointer-events: none;			'none' tells the mouse to ignore the rectangle.  This is commented out, so someone can click the link in the tooltip */
+}
+
+.foptip {
+	background: @foptipcolor;
+}
+
+.ecptip {
+	background: @ecptipcolor;
+}
+
+.fmstip {
+	background: @fmstipcolor;
+}
+
+path.fopclass {
+	stroke: @foplinecolor;
+}
+
+path.ecpclass {
+	stroke: @ecplinecolor;
+}
+
+path.fmsclass {
+	stroke: @fmslinecolor;
+}
+
+.CheckBoxesDiv1 {
+	float:left;
+	padding: 0 0 0 0;
+}
+
+.chklabellabel {
+	font-size: @checkboxfontsize;
+	font-weight: bold;
+}
+
+.chklabel {
+	font-size: @checkboxfontsize;
+}
+
+.chklabelFOP {
+	color: @foplinecolor;
+	font-size: @checkboxfontsize;
+}
+
+.chklabelECP {
+	color: @ecplinecolor;
+	font-size: @checkboxfontsize;
+}
+
+.chklabelFMS {
+	color: @fmslinecolor;
+	font-size: @checkboxfontsize;
+}
