@@ -1,0 +1,23 @@
+Video: https://www.youtube.com/watch?v=U8GBXvdmHT4
+$	clear 			---Clears the screen
+$	git version		---getting GIT version
+
+---Get into directory where files will be stored:
+$	cd C:/Users/surikov.sergey.a/Documents
+
+//---To see what is inside of directory (with or without hidden files):
+//$	ls
+//$	ls -a
+//$	la -al
+
+---Create GIT repository: (video min:12:50), it creates subdir "JFAS_BAKUP"
+$	git init JFAS_BAKUP
+$	cd C:/Users/surikov.sergey.a/Documents/JFAS_BAKUP
+---(video min:13.28)
+---looking what is inside control structure:
+$	tree .git | more
+
+$	git status ---Nothing to commit yet.
+$	git add GIT_Tutorial.txt	---adding the file is an indication that we are willing 
+								--- to participate in the next transactional changes.
+$	git status ---Indication of the changes to be commited.
