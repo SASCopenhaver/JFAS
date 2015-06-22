@@ -21,3 +21,9 @@ $	git status ---Nothing to commit yet.
 $	git add GIT_Tutorial.txt	---adding the file is an indication that we are willing 
 								--- to participate in the next transactional changes.
 $	git status ---Indication of the changes to be commited.
+$	git commit -m "this is the first commit"
+
+===============================================================================
+---Transfering to GitHub:
+$	git remote add origin https://github.com/SASCopenhaver/JFAS.git
+$	git push -u master
